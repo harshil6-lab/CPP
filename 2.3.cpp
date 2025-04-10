@@ -23,10 +23,10 @@ void bank::createAcc(int acc)
     double Amount;
     cout << "\nEnter Your Name : (First Name) => ";
     cin >> holdername;
-    cout << "\nEnter Your Initial Amount  =>  ";
+    cout << "Enter Your Initial Amount  =>  ";
     cin >> Amount;
     balance = Amount; 
-    cout<<"\nCreate Your Own Password => ";
+    cout<<"Create Your Own Password => ";
     cin>>password;
     accnum = acc;
     cout << "----Your Account Successfully Opened ----\n";
@@ -72,7 +72,7 @@ int main()
 
     do
     {
-        cout << "\n\n\n\n";
+        cout << "\n";
         cout << "1 => Create Account\n";
         cout << "2 => Deposit Money\n";
         cout << "3 => Withdraw Money\n";
@@ -97,13 +97,12 @@ int main()
             cout<<"Enter Your Password =>";
             cin>>c;
             double Amount;
-            cout << "Enter Your Amount => ";
-            cin >> Amount;
             int a= 0;
             for (int j = 0; j < i; j++) 
             {
                 if (b[j].getAccNum() == k && b[j].Ppassword()){
-                    
+                    cout << "Enter Your Amount => ";
+                     cin >> Amount;
                     b[j].deposit(Amount);
                     a = 1;
                     break;
@@ -121,12 +120,12 @@ int main()
             cout<<"Enter Your Password =>";
             cin>>c;
             double Amount;
-            cout << "Enter Your Amount => ";
-            cin >> Amount;
             int a= 0;
             for (int j = 0; j < i; j++) 
             {
                 if (b[j].getAccNum() == k && b[j].Ppassword() == c) {
+                    cout << "Enter Your Amount => ";
+                     cin >> Amount;
                     b[j].withdraw(Amount);
                     a= 1;
                     break;
