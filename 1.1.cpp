@@ -61,7 +61,7 @@ int main()
 
     do
     {
-        cout << "\n\n\n\n";
+        cout << "\n";
         cout << "1 => Create Account\n";
         cout << "2 => Deposit Money\n";
         cout << "3 => Withdraw Money\n";
@@ -95,7 +95,7 @@ int main()
                         break;
                     }
                 }
-                if(a) cout<<"Enter Valid Account Number !!";
+                if(!a) cout<<"Enter Valid Account Number !!";
             }
             break;
 
@@ -107,7 +107,7 @@ int main()
                 double Amount;
                 cout << "Enter Your Amount => ";
                 cin >> Amount;
-                int b = 0;
+                int a = 0;
                 for (int j = 0; j < i; j++) 
                 {
                     if (b[j].getAccNum() == k) {
@@ -116,7 +116,7 @@ int main()
                         break;
                     }
                 }
-                if(a) cout << "Account not found!\n";
+                if(!a) cout << "Account not found!\n";
                 
             }
             break;
@@ -126,26 +126,26 @@ int main()
                 int k;
                 cout << "Enter Your Account Number => ";
                 cin >> k;
-                int c = 0;
+                int a = 0;
                 for (int j = 0; j < i; j++) {
                     if (b[j].getAccNum() == k) {
                         b[j].displaydetails();
-                        c =1;
+                        a =1;
                         break;
                     }
                 }
-                if(c) cout << "Account not found!\n";
+                if(!a) cout << "Account not found!\n";
                 
             }
             break;
 
         case 0:
+         cout<<"\n24CE049_HARSHIL"<<endl;
             return 0;
 
         default:
             cout << "Enter Valid Choice !!!\n";
         }
     } while (Choice != 0);
-
     return 0;
 }
